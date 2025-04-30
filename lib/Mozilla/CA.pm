@@ -8,8 +8,7 @@ use File::Spec ();
 use File::Basename qw(dirname);
 
 sub SSL_ca_file {
-    my $file = File::Spec->catfile(dirname(__FILE__), "CA", "cacert.pem");
-    return File::Spec->rel2abs($file);
+    return File::Spec->catfile('/etc/pki/tls/certs/ca-bundle.crt');
 }
 
 1;
